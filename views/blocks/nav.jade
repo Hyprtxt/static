@@ -1,0 +1,26 @@
+mixin logo()
+  a.pull-left.mobile-logo.p-r(href=navbarBrand.link)
+    h3=navbarBrand.title
+// Desktop Navigation
+nav.navbar.navbar-main.hidden-sm-down.bg-faded.m-b-lg
+  .container
+    +logo
+    ul.nav.navbar-nav
+      each nav in navigation
+        li.nav-item(class=nav.liclass)
+          a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}
+// Mobile Navigation
+.mobile-nav-spacer.hidden-md-up
+nav.navbar.navbar-mobile.navbar-main.navbar-fixed-top.hidden-md-up.bg-faded
+  .container
+    .row
+      .col-sm-12
+        // Mobile Navigation
+        button.navbar-toggler.pull-right(data-toggle='collapse', data-target='#mobileNav') &#9776;
+        +logo
+        // Mobile Dropdown
+        .clearfix
+        ul#mobileNav.nav.nav-pills.nav-stacked.collapse.p-t
+          each nav in navigation
+            li.nav-item
+              a.nav-link(href=nav.link, class=nav.class, id=nav.id) #{nav.title}

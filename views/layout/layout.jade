@@ -1,0 +1,11 @@
+doctype html
+html
+  block head
+    include ./includes/head.jade
+  body
+    block navigation
+      include ../blocks/nav.jade
+    block content
+      h1 This is the default content block
+    block foot
+      include ./includes/foot.jade
