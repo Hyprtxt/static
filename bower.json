@@ -1,0 +1,21 @@
+{
+  "name": "static.hyprtxt.com",
+  "description": "'The first reincarnation of the Hyprtxt Gulp static site generator as an open source project'",
+  "main": "gulpfile.coffee",
+  "authors": [
+    "Taylor Young <taylor@hyprtxt.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Hyprtxt/static",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.4"
+  }
+}
